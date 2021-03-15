@@ -313,13 +313,14 @@ Based on this analysis, we can outline some different testing strategies. To mak
 <pre>
     w: expresses the move {"robotmove": "moveForward", "time": 600}
     s: expresses the move {"robotmove": "moveForward", "time": 600}
+    h: expresses the move {"robotmove": "moveForward", "time": 100}
     l: expresses the move {"robotmove": "turnLeft", "time": 300}
     r: expresses the move {"robotmove": "turnRight", "time": 300}
 </pre>
 
 <pre>
-The robot will be asked to move forward until it finds an obstacle. It will then perform the path backwards to return to the original position. 
-Whenever the robot executes a move we save the identifier of the move in one s
+The robot will be asked to keep going until it finds an obstacle. It will then perform the path backwards to return to the original position.
+Each time the robot executes a move we save the identifier of the move in a string
 
 When the application ends the two strings must be made up as follows:<br>
 moves1: "wwwww"
